@@ -1,36 +1,50 @@
 package com.lifesitech.android.timetable;
 
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+
 
 public class MainActivity extends AppCompatActivity {
+    TextView m1s;
+    EditText edit_subject;
+    Map<String, String> map = new HashMap<>();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        ArrayList<String> list = new ArrayList<>();
-
-        list.add("月");
-        list.add("火");
-        list.add("水");
-        list.add("木");
-        list.add("金");
-        list.add("土");
+        m1s = (TextView) findViewById(R.id.m1s);
+        edit_subject = (EditText) findViewById(R.id.edit_subject);
+    }
 
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                getApplicationContext(), android.R.layout.simple_list_item_1, list);
+    public void dialog_m1(View v) {
+        //テキスト入力を受け付けるビューを作成します。
+        CustomDialogFragment customDialogFragment = new CustomDialogFragment();
+        customDialogFragment.show(getFragmentManager(), "test");
+    }
 
-        GridView gridView = (GridView) findViewById(R.id.list);
-        gridView.setAdapter(adapter);
-        gridView.setBackgroundColor(Color.parseColor("#ff1493"));
+    public void ok(View v) {
 
     }
+
+
+
 }

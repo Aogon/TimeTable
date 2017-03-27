@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:padding="10dp"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="-4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -154,7 +154,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
                     android:onClick="dialog_m1"
                     android:orientation="vertical">
@@ -164,7 +164,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
-                        android:textSize="24sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/m1t"
@@ -175,9 +175,10 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_m2">
 
                     <TextView
                         android:id="@+id/m2s"
@@ -195,9 +196,10 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_m3">
 
                     <TextView
                         android:id="@+id/m3s"
@@ -214,9 +216,10 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_m4">
 
                     <TextView
                         android:id="@+id/m4s"
@@ -233,9 +236,10 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_m5">
 
                     <TextView
                         android:id="@+id/m5s"
@@ -252,9 +256,10 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_m6">
 
                     <TextView
                         android:id="@+id/m6s"
@@ -271,9 +276,10 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_m7">
 
                     <TextView
                         android:id="@+id/m7s"
@@ -299,16 +305,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_tu1">
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/tu1s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView10"
+                        android:id="@+id/tu1t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -318,16 +325,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_tu2">
 
                     <TextView
-                        android:id="@+id/textView15"
+                        android:id="@+id/tu2s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView14"
+                        android:id="@+id/tu2t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -338,16 +346,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_tu3">
 
                     <TextView
-                        android:id="@+id/textView17"
+                        android:id="@+id/tu3s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView16"
+                        android:id="@+id/tu3t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -357,16 +366,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_tu4">
 
                     <TextView
-                        android:id="@+id/textView25"
+                        android:id="@+id/tu4s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView18"
+                        android:id="@+id/tu4t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -376,16 +386,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_tu5">
 
                     <TextView
-                        android:id="@+id/textView20"
+                        android:id="@+id/tu5s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView19"
+                        android:id="@+id/tu5t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -395,16 +406,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_tu6">
 
                     <TextView
-                        android:id="@+id/textView22"
+                        android:id="@+id/tu6s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView21"
+                        android:id="@+id/tu6t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -414,16 +426,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_tu7">
 
                     <TextView
-                        android:id="@+id/textView24"
+                        android:id="@+id/tu7s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView23"
+                        android:id="@+id/tu7t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -441,17 +454,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_w1">
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/w1s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
                         android:elevation="10dp" />
 
                     <TextView
-                        android:id="@+id/textView10"
+                        android:id="@+id/w1t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -461,17 +475,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_w2">
 
                     <TextView
-                        android:id="@+id/textView15"
+                        android:id="@+id/w2s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
                         android:elevation="10dp" />
 
                     <TextView
-                        android:id="@+id/textView14"
+                        android:id="@+id/w2t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -482,17 +497,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_w3">
 
                     <TextView
-                        android:id="@+id/textView17"
+                        android:id="@+id/w3s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
                         android:elevation="10dp" />
 
                     <TextView
-                        android:id="@+id/textView16"
+                        android:id="@+id/w3t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -502,17 +518,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_w4">
 
                     <TextView
-                        android:id="@+id/textView25"
+                        android:id="@+id/w4s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
                         android:elevation="10dp" />
 
                     <TextView
-                        android:id="@+id/textView18"
+                        android:id="@+id/w4t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -522,17 +539,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_w5">
 
                     <TextView
-                        android:id="@+id/textView20"
+                        android:id="@+id/w5s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
                         android:elevation="10dp" />
 
                     <TextView
-                        android:id="@+id/textView19"
+                        android:id="@+id/w5t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -542,17 +560,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_w6">
 
                     <TextView
-                        android:id="@+id/textView22"
+                        android:id="@+id/w6s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
                         android:elevation="10dp" />
 
                     <TextView
-                        android:id="@+id/textView21"
+                        android:id="@+id/w6t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -562,17 +581,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_w7">
 
                     <TextView
-                        android:id="@+id/textView24"
+                        android:id="@+id/w7s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
                         android:elevation="10dp" />
 
                     <TextView
-                        android:id="@+id/textView23"
+                        android:id="@+id/w7t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -590,17 +610,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_th1">
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/th1s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
                         android:elevation="16dp" />
 
                     <TextView
-                        android:id="@+id/textView10"
+                        android:id="@+id/th1t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -611,17 +632,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_th2">
 
                     <TextView
-                        android:id="@+id/textView15"
+                        android:id="@+id/th2s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
                         android:elevation="16dp" />
 
                     <TextView
-                        android:id="@+id/textView14"
+                        android:id="@+id/th2t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -633,17 +655,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_th3">
 
                     <TextView
-                        android:id="@+id/textView17"
+                        android:id="@+id/th3s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
                         android:elevation="16dp" />
 
                     <TextView
-                        android:id="@+id/textView16"
+                        android:id="@+id/th3t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -654,17 +677,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_th4">
 
                     <TextView
-                        android:id="@+id/textView25"
+                        android:id="@+id/th4s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
                         android:elevation="16dp" />
 
                     <TextView
-                        android:id="@+id/textView18"
+                        android:id="@+id/th4t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -675,17 +699,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_th5">
 
                     <TextView
-                        android:id="@+id/textView20"
+                        android:id="@+id/th5s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
                         android:elevation="16dp" />
 
                     <TextView
-                        android:id="@+id/textView19"
+                        android:id="@+id/th5t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -696,17 +721,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_th6">
 
                     <TextView
-                        android:id="@+id/textView22"
+                        android:id="@+id/th6s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
                         android:elevation="16dp" />
 
                     <TextView
-                        android:id="@+id/textView21"
+                        android:id="@+id/th6t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -717,17 +743,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_th7">
 
                     <TextView
-                        android:id="@+id/textView24"
+                        android:id="@+id/th7s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
                         android:elevation="16dp" />
 
                     <TextView
-                        android:id="@+id/textView23"
+                        android:id="@+id/th7t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -746,16 +773,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_f1">
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/f1s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView10"
+                        android:id="@+id/f1t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -765,16 +793,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_f2">
 
                     <TextView
-                        android:id="@+id/textView15"
+                        android:id="@+id/f2s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView14"
+                        android:id="@+id/f2t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -785,16 +814,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_f3">
 
                     <TextView
-                        android:id="@+id/textView17"
+                        android:id="@+id/f3s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView16"
+                        android:id="@+id/f3t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -804,16 +834,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_f4">
 
                     <TextView
-                        android:id="@+id/textView25"
+                        android:id="@+id/f4s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView18"
+                        android:id="@+id/f4t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -823,16 +854,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_f5">
 
                     <TextView
-                        android:id="@+id/textView20"
+                        android:id="@+id/f5s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView19"
+                        android:id="@+id/f5t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -842,16 +874,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_f6">
 
                     <TextView
-                        android:id="@+id/textView22"
+                        android:id="@+id/f6s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView21"
+                        android:id="@+id/f6t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -861,16 +894,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_f7">
 
                     <TextView
-                        android:id="@+id/textView24"
+                        android:id="@+id/f7s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView23"
+                        android:id="@+id/f7t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -890,16 +924,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_sa1">
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/sa1s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView10"
+                        android:id="@+id/sa1t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -909,16 +944,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_sa2">
 
                     <TextView
-                        android:id="@+id/textView15"
+                        android:id="@+id/sa2s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView14"
+                        android:id="@+id/sa2t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -929,16 +965,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_sa3">
 
                     <TextView
-                        android:id="@+id/textView17"
+                        android:id="@+id/sa3s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView16"
+                        android:id="@+id/sa3t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -948,16 +985,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_sa4">
 
                     <TextView
-                        android:id="@+id/textView25"
+                        android:id="@+id/sa4s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView18"
+                        android:id="@+id/sa4t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -967,16 +1005,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_sa5">
 
                     <TextView
-                        android:id="@+id/textView20"
+                        android:id="@+id/sa5s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView19"
+                        android:id="@+id/sa5t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -986,16 +1025,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:onClick="dialog_sa6"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView22"
+                        android:id="@+id/sa6s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView21"
+                        android:id="@+id/sa6t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />
@@ -1005,16 +1045,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="dialog_sa7">
 
                     <TextView
-                        android:id="@+id/textView24"
+                        android:id="@+id/sa7s"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.41" />
 
                     <TextView
-                        android:id="@+id/textView23"
+                        android:id="@+id/sa7t"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1" />

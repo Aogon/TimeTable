@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     TextView m1s;
     EditText edit_subject;
     Map<String, String> map = new HashMap<>();
-
+    SharedPreferences sharedPreferences = getSharedPreferences("Data", MODE_PRIVATE);
 
 
     @Override
@@ -37,8 +37,30 @@ public class MainActivity extends AppCompatActivity {
 
     public void dialog_m1(View v) {
         //テキスト入力を受け付けるビューを作成します。
-        CustomDialogFragment customDialogFragment = new CustomDialogFragment();
-        customDialogFragment.show(getFragmentManager(), "test");
+        final EditText editView = new EditText(MainActivity.this);
+        new AlertDialog.Builder(MainActivity.this)
+                .setIcon(android.R.drawable.ic_dialog_info)
+                .setTitle("テキスト入力ダイアログ")
+                //setViewにてビューを設定します。
+                .setView(editView)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        //入力した文字をトースト出力する
+                        Toast.makeText(MainActivity.this,
+                                editView.getText().toString(),
+                                Toast.LENGTH_LONG).show();
+
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("subject_m1", editView.getText().toString());
+
+                    }
+                })
+                .setNegativeButton("キャンセル", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                    }
+                })
+                .show();
+
     }
 
     public void ok(View v) {

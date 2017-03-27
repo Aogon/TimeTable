@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import static com.lifesitech.android.timetable.R.id.edit_subject;
 
@@ -39,6 +38,7 @@ public class CustomDialogFragment extends DialogFragment {
             public void onClick(View v) {
                 EditText edit_subject = (EditText)dialog.findViewById(R.id.edit_subject);
                 String subject = edit_subject.getText().toString();
+
                 dismiss();
 
             }

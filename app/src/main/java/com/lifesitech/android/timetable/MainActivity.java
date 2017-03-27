@@ -1,5 +1,6 @@
 package com.lifesitech.android.timetable;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -21,9 +22,10 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     TextView m1s;
+    TextView m1t;
     EditText edit_subject;
     Map<String, String> map = new HashMap<>();
-    SharedPreferences sharedPreferences = getSharedPreferences("Data", MODE_PRIVATE);
+
 
 
     @Override
@@ -31,27 +33,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         m1s = (TextView) findViewById(R.id.m1s);
-        edit_subject = (EditText) findViewById(R.id.edit_subject);
+        m1t = (TextView) findViewById(R.id.m1t);
+        SharedPreferences sharedPreferences = getSharedPreferences("Data", Context.MODE_PRIVATE);
+        m1s.setText(sharedPreferences.getString("subject_m1", ""));
+        m1t.setText(sharedPreferences.getString("teacher_m2", ""));
     }
 
 
     public void dialog_m1(View v) {
         //テキスト入力を受け付けるビューを作成します。
         final EditText editView = new EditText(MainActivity.this);
+        final EditText editView2 = new EditText(MainActivity.this);
         new AlertDialog.Builder(MainActivity.this)
                 .setIcon(android.R.drawable.ic_dialog_info)
                 .setTitle("テキスト入力ダイアログ")
                 //setViewにてビューを設定します。
                 .setView(editView)
+                .setView(editView2)
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
-                        //入力した文字をトースト出力する
-                        Toast.makeText(MainActivity.this,
-                                editView.getText().toString(),
-                                Toast.LENGTH_LONG).show();
-
+                        SharedPreferences sharedPreferences = getSharedPreferences("Data", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putString("subject_m1", editView.getText().toString());
+                        editor.putString("teacher_m1", editView2.getText().toString());
+                        m1s.setText(editView.getText().toString());
 
                     }
                 })

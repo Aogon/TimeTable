@@ -247,7 +247,119 @@ public class MainActivity extends AppCompatActivity {
         makeDialog("tu7", tu7s, tu7t);
     }
 
-    
+    public void dialog_w1(View v) {
+        makeDialog("w1", w1s, w1t);
+    }
+
+    public void dialog_w2(View v) {
+        makeDialog("w2", w2s, w2t);
+    }
+
+    public void dialog_w3(View v) {
+        makeDialog("w3", w3s, w3t);
+    }
+
+    public void dialog_w4(View v) {
+        makeDialog("w4", w4s, w4t);
+    }
+
+    public void dialog_w5(View v) {
+        makeDialog("w5", w5s, w5t);
+    }
+
+    public void dialog_w6(View v) {
+        makeDialog("w6", w6s, w6t);
+    }
+
+    public void dialog_w7(View v) {
+        makeDialog("w7", w7s, w7t);
+    }
+
+    public void dialog_th1(View v) {
+        makeDialog("th1", th1s, th1t);
+    }
+
+    public void dialog_th2(View v) {
+        makeDialog("th2", th2s, th2t);
+    }
+
+    public void dialog_th3(View v) {
+        makeDialog("th3", th3s, th3t);
+    }
+
+    public void dialog_th4(View v) {
+        makeDialog("th4", th4s, th4t);
+    }
+
+    public void dialog_th5(View v) {
+        makeDialog("th5", th5s, th5t);
+    }
+
+    public void dialog_th6(View v) {
+        makeDialog("th6", th6s, th6t);
+    }
+
+    public void dialog_th7(View v) {
+        makeDialog("th7", th7s, th7t);
+    }
+
+    public void dialog_f1(View v) {
+        makeDialog("f1", f1s, f1t);
+    }
+
+    public void dialog_f2(View v) {
+        makeDialog("f2", f2s, f2t);
+    }
+
+    public void dialog_f3(View v) {
+        makeDialog("f3", f3s, f3t);
+    }
+
+    public void dialog_f4(View v) {
+        makeDialog("f4", f4s, f4t);
+    }
+
+    public void dialog_f5(View v) {
+        makeDialog("f5", f5s, f5t);
+    }
+
+    public void dialog_f6(View v) {
+        makeDialog("f6", f6s, f6t);
+    }
+
+    public void dialog_f7(View v) {
+        makeDialog("f7", f7s, f7t);
+    }
+
+    public void dialog_sa1(View v) {
+        makeDialog("sa1", sa1s, sa1t);
+    }
+
+    public void dialog_sa2(View v) {
+        makeDialog("sa2", sa2s, sa2t);
+    }
+
+    public void dialog_sa3(View v) {
+        makeDialog("sa3", sa3s, sa3t);
+    }
+
+    public void dialog_sa4(View v) {
+        makeDialog("sa4", sa4s, sa4t);
+    }
+
+    public void dialog_sa5(View v) {
+        makeDialog("sa5", sa5s, sa5t);
+    }
+
+    public void dialog_sa6(View v) {
+        makeDialog("sa6", sa6s, sa6t);
+    }
+
+    public void dialog_sa7(View v) {
+        makeDialog("sa7", sa7s, sa7t);
+    }
+
+
 
 
 

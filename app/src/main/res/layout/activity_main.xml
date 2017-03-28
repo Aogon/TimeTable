@@ -1038,9 +1038,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
-                        android:background="@color/white"
                         android:gravity="center"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/sa2t"
@@ -1063,9 +1062,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
-                        android:background="@color/white"
                         android:gravity="center"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/sa3t"
@@ -1087,9 +1085,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
-                        android:background="@color/white"
                         android:gravity="center"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/sa4t"
@@ -1111,9 +1108,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
-                        android:background="@android:color/white"
                         android:gravity="center"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/sa5t"
@@ -1135,9 +1131,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
-                        android:background="@color/white"
                         android:gravity="center"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/sa6t"
@@ -1159,9 +1154,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1.41"
-                        android:background="@android:color/white"
                         android:gravity="center"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/sa7t"

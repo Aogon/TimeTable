@@ -176,18 +176,16 @@ public class MainActivity extends AppCompatActivity {
         init("f7", f7s, f7t);
 
         init("sa1", sa1s, sa1t);
-        init("sa2", sa1s, sa2t);
-        init("sa3", sa1s, sa3t);
-        init("sa4", sa1s, sa4t);
-        init("sa5", sa1s, sa5t);
-        init("sa6", sa1s, sa6t);
-        init("sa7", sa1s, sa7t);
+        init("sa2", sa2s, sa2t);
+        init("sa3", sa3s, sa3t);
+        init("sa4", sa4s, sa4t);
+        init("sa5", sa5s, sa5t);
+        init("sa6", sa6s, sa6t);
+        init("sa7", sa7s, sa7t);
 
-
-
-
-
-
+        ColorDrawable colorDrawable = (ColorDrawable) f2s.getBackground();
+        int colorInt = colorDrawable.getColor();
+        Log.d("color" + "f2s", String.valueOf(colorInt));
     }
 
 
@@ -445,7 +443,9 @@ public class MainActivity extends AppCompatActivity {
         textView2.setText(sharedPreferences.getString("teacher_" + key, ""));
         textView1.setBackgroundColor(getResources().getColor(sharedPreferences.getInt("color_" + key, R.color.white)));
         textView2.setBackgroundColor(getResources().getColor(sharedPreferences.getInt("color_" + key, R.color.white)));
-
+        ColorDrawable colorDrawable = (ColorDrawable) textView1.getBackground();
+        int colorInt = colorDrawable.getColor();
+        Log.d("color" + key, String.valueOf(colorInt));
     }
 }
 

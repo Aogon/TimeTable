@@ -92,8 +92,18 @@ public class MainActivity extends AppCompatActivity {
             editor.remove("selected");
             editor.apply();
             BUTTON_STATE = 0;
-
-
+        } else if (BUTTON_STATE == 2) {
+            SharedPreferences sharedPreferences = getSharedPreferences("Data", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            LinearLayout parent = (LinearLayout)v;
+            TextView textView1 = (TextView) parent.getChildAt(0);
+            TextView textView2 = (TextView) parent.getChildAt(1);
+            editor.remove("subject_" + String.valueOf(parent.getId()));
+            editor.remove("teacher_" + String.valueOf(parent.getId()));
+            editor.remove("color_" + String.valueOf(parent.getId()));
+            editor.apply();
+            init(String.valueOf(parent.getId()), textView1, textView2);
+            BUTTON_STATE = 0;
         }
 
     }
@@ -184,12 +194,17 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()){
-//            case R.id.menu_share:
-//        }
-//    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_share:
+
+            case R.id.menu_delete:
+                BUTTON_STATE = 2;
+
+        }
+        return true;
+    }
 
 
 }

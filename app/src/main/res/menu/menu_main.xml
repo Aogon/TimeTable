@@ -7,4 +7,10 @@
         android:title="Share"
         support:actionProviderClass="android.support.v7.widget.ShareActionProvider"
         support:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_delete"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="Delete"
+        support:showAsAction="always" />
 </menu>

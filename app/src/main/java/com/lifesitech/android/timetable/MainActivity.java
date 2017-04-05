@@ -10,7 +10,10 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewDebug;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -50,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onLongClick(View v) {
                         BUTTON_STATE = 1;
+                        SharedPreferences sharedPreferences = getSharedPreferences("Data", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putInt("selected", v.getId());
+                        editor.apply();
                         return true;
                     }
                 });
@@ -62,8 +69,33 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void dialog(View v) {
-        LinearLayout parent = (LinearLayout)v;
-        makeDialog(String.valueOf(parent.getId()), (TextView)parent.getChildAt(0), (TextView)parent.getChildAt(1));
+        if (BUTTON_STATE == 0) {
+            LinearLayout parent = (LinearLayout)v;
+            makeDialog(String.valueOf(parent.getId()), (TextView)parent.getChildAt(0), (TextView)parent.getChildAt(1));
+        } else if (BUTTON_STATE == 1) {
+            SharedPreferences sharedPreferences = getSharedPreferences("Data", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            int selectedViewId = sharedPreferences.getInt("selected", -1);
+            LinearLayout parent = (LinearLayout)v;
+            TextView textView1 = (TextView) parent.getChildAt(0);
+            TextView textView2 = (TextView) parent.getChildAt(1);
+            String subject = sharedPreferences.getString("subject_" + String.valueOf(selectedViewId), "");
+            String teacher = sharedPreferences.getString("teacher_" + String.valueOf(selectedViewId), "");
+            int colorId = sharedPreferences.getInt("color_" + String.valueOf(selectedViewId), R.color.white);
+            textView1.setBackgroundColor(getResources().getColor(colorId));
+            textView2.setBackgroundColor(getResources().getColor(colorId));
+            textView1.setText(subject);
+            textView2.setText(teacher);
+            editor.putString("subject_" + String.valueOf(parent.getId()), subject);
+            editor.putString("teacher_" + String.valueOf(parent.getId()), teacher);
+            editor.putInt("color_" + String.valueOf(parent.getId()), colorId);
+            editor.remove("selected");
+            editor.apply();
+            BUTTON_STATE = 0;
+
+
+        }
+
     }
 
 
@@ -145,6 +177,19 @@ public class MainActivity extends AppCompatActivity {
         textView1.setBackgroundColor(getResources().getColor(sharedPreferences.getInt("color_" + key, R.color.white)));
         textView2.setBackgroundColor(getResources().getColor(sharedPreferences.getInt("color_" + key, R.color.white)));
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()){
+//            case R.id.menu_share:
+//        }
+//    }
 
 
 }

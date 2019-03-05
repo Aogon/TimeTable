@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Environment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -193,10 +194,10 @@ public class MainActivity extends AppCompatActivity {
         textView2.setBackgroundColor(getResources().getColor(sharedPreferences.getInt("color_" + key, R.color.white)));
     }
 
-    public void share() {
+    public void share(File file) {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("line://msg/text/" + "Hello World"));
+        intent.setData(Uri.parse("line://msg/image/" + Uri.fromFile(file)));
         startActivity(intent);
     }
 
@@ -239,7 +240,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu_share:
-                share();
+                File file = new File(Environment.getExternalStorageDirectory() + "/capture.jpeg");
+                file.getParentFile().mkdir();
+                saveCapture(findViewById(R.id.timetable), file);
+                share(file);
 
             case R.id.menu_delete:
                 BUTTON_STATE = 2;

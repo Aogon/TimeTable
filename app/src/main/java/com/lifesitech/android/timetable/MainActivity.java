@@ -2,10 +2,13 @@ package com.lifesitech.android.timetable;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,7 +23,9 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -188,6 +193,42 @@ public class MainActivity extends AppCompatActivity {
         textView2.setBackgroundColor(getResources().getColor(sharedPreferences.getInt("color_" + key, R.color.white)));
     }
 
+    public void share() {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("line://msg/text/" + "Hello World"));
+        startActivity(intent);
+    }
+
+    public Bitmap getViewCapture(View view) {
+        view.setDrawingCacheEnabled(true);
+        Bitmap cache = view.getDrawingCache();
+        Bitmap screenShot = Bitmap.createBitmap(cache);
+        view.setDrawingCacheEnabled(false);
+        return  screenShot;
+    }
+
+    public void saveCapture(View view, File file) {
+        Bitmap capture = getViewCapture(view);
+        FileOutputStream fos = null;
+        try {
+            fos = new FileOutputStream(file, false);
+            capture.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+            fos.flush();
+        }catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (fos != null) {
+                 try {
+                     fos.close();
+                 }catch (IOException ie) {
+                      fos = null;
+                 }
+            }
+        }
+
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -198,6 +239,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu_share:
+                share();
 
             case R.id.menu_delete:
                 BUTTON_STATE = 2;
